@@ -1,0 +1,68 @@
+
+<div  class="container" >
+  <div class="row"  >
+
+  	<div class="col" >
+ <div class="dropzone"  appDnd (filesChangeEmiter)="onFilesChange($event)"  (filesInvalidEmiter)="onInvalid($event)" [allowed_extensions]="['png', 'jpg', 'bmp']">
+  <div class="text-wrapper">
+    <div class="centered">Drop your file here!</div>
+  </div>
+</div>
+</div>
+
+
+</div>
+<div class="row">
+<div class="col ">
+
+	<input #photo1 type="file" />
+<input type="file"  id="photo2" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+
+<div class="well">
+<div *ngIf="pic" class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+    <span class="sr-only"></span>
+  </div>
+</div>
+   <img class="mythumbnail" id="preview" [src]="url" *ngIf="pic">
+<!-- button to trigger the file upload when submitted -->
+
+<!-- button to trigger the file upload when submitted -->
+<button type="button" class="btn btn-success btn-s" (click)="upload()">
+Upload with method 2
+</button>
+	</div>
+
+</div>
+ 
+</div>
+
+
+<div class="dropzone-list">
+  <ul>
+    <li *ngFor="let file of fileList">
+      {{ file.name }}
+    </li>
+  </ul>
+</div>
+
+
+<ul class="invalid">
+    <li *ngFor="let file of invalidFiles">
+      {{ file.name }}
+    </li>
+  </ul>
+{{fileList}}
+
+<video   src="http://localhost:3000/api/video" width="320" height="240" controls autoplay>
+	
+	</video>
+	 <audio controls>
+  <source src="" type="audio/mp3">
+ 
+
+</audio> 
+
+<br>
+
+<a href="http://localhost:3000/api/download"> download</a>
