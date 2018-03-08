@@ -16,7 +16,7 @@ const app = express();
 
 const nexmo = new Nexmo({
     apiKey: 'XXXXXXXX',
-    apiSecret: XXXXXXXX'
+    apiSecret: 'XXXXXXXX'
 }, {debug: true});
 
 app.set('view engine','ejs');
