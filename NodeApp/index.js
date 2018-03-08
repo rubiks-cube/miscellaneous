@@ -15,8 +15,8 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 const nexmo = new Nexmo({
-    apiKey: '7f4b00a3',
-    apiSecret: '2Jzc9XvWyj0WAFlx'
+    apiKey: 'XXXXXXXX',
+    apiSecret: XXXXXXXX'
 }, {debug: true});
 
 app.set('view engine','ejs');
@@ -27,7 +27,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
-const mongoURI = 'mongodb://abhi03:123456@ds257858.mlab.com:57858/monogouploads';
+const mongoURI = 'mongodb://XX:12XXX456@ds257858.mlab.com:57858/monogouploads';
 let gfs;
 
 const conn = mongoose.createConnection(mongoURI);
@@ -176,8 +176,8 @@ if(err){
 //paypal api
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'AcDhUuWxChdbi_TYtjtP_TVvO3jOrsDYDSS8J5rHok9ald-doK4BJqTeqOkjI9cNiEesWcUxEc2KzXOF',
-    'client_secret': 'EIRfbBcc7aUoNgwQVP1eOuARvLrTHxHPDqigfnTHzihAOCvlUpqsi__JL_YQb6IRqkBswYDNqLrv8Hsb'
+    'client_id': 'AcDhUuWxChdbi_TYXXXXXXXXXXXXXXXXXXXXXXXXXXXX5rHok9ald-doK4BJqTeqOkjI9cNiEesWcUxEc2KzXOF',
+    'client_secret': 'EXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXTHzihAOCvlUpqsi__JL_YQb6IRqkBswYDNqLrv8Hsb'
   });
 
 app.post('/pay', (req,res) => {
