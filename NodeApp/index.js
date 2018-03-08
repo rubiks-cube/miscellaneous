@@ -20,7 +20,7 @@ const nexmo = new Nexmo({
 }, {debug: true});
 
 app.set('view engine','ejs');
-// app.engine('html', ejs.renderFile);
+
 
 app.use(express.static(__dirname + '/public'));
 
